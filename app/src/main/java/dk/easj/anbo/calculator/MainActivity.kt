@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             calculate()
         }
 
-       binding.edittextNumber1.setOnKeyListener { view, i, keyEvent ->
+        /*binding.edittextNumber1.setOnKeyListener { view, i, keyEvent ->
             calculate()
             false
         }
@@ -40,19 +40,24 @@ class MainActivity : AppCompatActivity() {
 
             override fun onNothingSelected(adapterView: AdapterView<*>?) {}
         }
+         */
     }
 
     private fun calculate() {
         val number1str = binding.edittextNumber1.text.toString().trim()
         val number2str = binding.edittextNumber2.text.toString().trim()
+        var error = false
         if (number1str.isEmpty()) {
             binding.edittextNumber1.error = "No number"
-            return
+            error = true
+            //return
         }
         if (number2str.isEmpty()) {
             binding.edittextNumber2.error = "No number"
-            return
+            error = true
+            //return
         }
+        if (error) return
         val number1 = number1str.toDouble()
         val number2 = number2str.toDouble()
         var result = 0.0
