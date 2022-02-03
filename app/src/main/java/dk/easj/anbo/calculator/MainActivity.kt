@@ -2,8 +2,6 @@ package dk.easj.anbo.calculator
 
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
 import androidx.appcompat.app.AppCompatActivity
 import dk.easj.anbo.calculator.databinding.ActivityMainBinding
 
